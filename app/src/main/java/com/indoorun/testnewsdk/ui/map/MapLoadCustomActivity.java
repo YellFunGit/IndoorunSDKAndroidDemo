@@ -1,10 +1,11 @@
-package com.indoorun.testnewsdk.ui;
+package com.indoorun.testnewsdk.ui.map;
 
 import android.os.Bundle;
 
 import com.indoorun.mapapi.control.Idr;
 import com.indoorun.mapapi.map.gl.IdrMapView;
 import com.indoorun.testnewsdk.R;
+import com.indoorun.testnewsdk.ui.BaseActionbarActivity;
 
 import butterknife.BindView;
 
@@ -23,5 +24,17 @@ public class MapLoadCustomActivity extends BaseActionbarActivity {
         idr = Idr.with(mapView);
         idr.loadRegion("14428254382730015")// 加载region
                 .loadFloor("14557583851000004");//加载指定楼层
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        idr.begin();
+    }
+
+    @Override
+    protected void onPause() {
+        idr.end();
+        super.onPause();
     }
 }

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activity_section_location_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.indoorun.testnewsdk.ui.map.MapLoadDefaultActivity">
+    tools:context="com.indoorun.testnewsdk.ui.SectionLocationListActivity">
 
-    <com.indoorun.mapapi.map.gl.IdrMapView
-        android:id="@+id/map_view"
+    <ListView
+        android:id="@+id/location_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 </RelativeLayout>

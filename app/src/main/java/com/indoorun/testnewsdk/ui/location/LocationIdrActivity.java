@@ -1,0 +1,44 @@
+package com.indoorun.testnewsdk.ui.location;
+
+import android.os.Bundle;
+
+import com.indoorun.mapapi.control.Idr;
+import com.indoorun.mapapi.map.gl.IdrMapView;
+import com.indoorun.mapapi.view.SpinnerView;
+import com.indoorun.testnewsdk.R;
+import com.indoorun.testnewsdk.ui.BaseActionbarActivity;
+
+import butterknife.BindView;
+
+public class LocationIdrActivity extends BaseActionbarActivity {
+    @BindView(R.id.location_map_view)
+    IdrMapView idrMapView;
+
+    @BindView(R.id.map_switcher)
+    SpinnerView spinnerView;
+
+    Idr idr;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_location);
+        setTitleTxt("绑定到Idr");
+        idr = Idr.with(idrMapView);
+        idr.loadRegion("14428254382730015").loadFloor(spinnerView);// 加载地图
+        idr.locateWithSwitcher()// 开启定位
+                .bindStartAndStopLocateToMapHelper(); //绑定到Idr
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        idr.begin();// 绑定到Idr，跟随Idr的生命周期开启和关闭定位。
+    }
+
+    @Override
+    protected void onPause() {
+        idr.end();
+        super.onPause();
+    }
+}

@@ -4,7 +4,7 @@
     android:id="@+id/activity_map_load_switcher"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.indoorun.testnewsdk.ui.MapLoadSwitcherActivity">
+    tools:context="com.indoorun.testnewsdk.ui.map.MapLoadSwitcherActivity">
 
     <com.indoorun.mapapi.map.gl.IdrMapView
         android:id="@+id/map_switcher_view"

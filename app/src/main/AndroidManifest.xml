@@ -16,7 +16,7 @@
             android:name="idrAppKey"
             android:value="3d256f0e0ebd51f6176358abd62c1ae0" />
 
-        <activity android:name=".ui.MapLoadDefaultActivity" />
+        <activity android:name=".ui.map.MapLoadDefaultActivity" />
         <activity android:name=".ui.SectionHomeListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,10 +25,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.BaseActionbarActivity" />
-        <activity android:name=".ui.LocationActivity" />
+        <activity android:name=".ui.location.LocationIdrActivity" />
         <activity android:name=".ui.SectionMapListActivity" />
-        <activity android:name=".ui.MapLoadCustomActivity" />
-        <activity android:name=".ui.MapLoadSwitcherActivity"></activity>
+        <activity android:name=".ui.map.MapLoadCustomActivity" />
+        <activity android:name=".ui.map.MapLoadSwitcherActivity" />
+        <activity android:name=".ui.SectionLocationListActivity" />
+        <activity android:name=".ui.location.LocationStandActivity"></activity>
     </application>
 
 </manifest>

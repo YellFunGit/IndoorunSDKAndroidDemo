@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import com.indoorun.testnewsdk.R;
+import com.indoorun.testnewsdk.ui.map.MapLoadCustomActivity;
+import com.indoorun.testnewsdk.ui.map.MapLoadDefaultActivity;
+import com.indoorun.testnewsdk.ui.map.MapLoadSwitcherActivity;
 import com.joanzapata.android.BaseAdapterHelper;
 import com.joanzapata.android.QuickAdapter;
 
