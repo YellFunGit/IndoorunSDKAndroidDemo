@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.indoorun.testnewsdk">
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="idrAppId"
+            android:value="2b497ada3b2711e4b60500163e0e2e6b" />
+        <meta-data
+            android:name="idrAppKey"
+            android:value="3d256f0e0ebd51f6176358abd62c1ae0" />
+
+        <activity android:name=".ui.MapLoadActivity" />
+        <activity android:name=".ui.SectionListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.BaseActionbarActivity"></activity>
+    </application>
+
+</manifest>
