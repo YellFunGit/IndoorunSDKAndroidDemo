@@ -10,6 +10,12 @@ import com.indoorun.testnewsdk.ui.BaseActionbarActivity;
 
 import butterknife.BindView;
 
+/**
+ * 加载楼层切换器，可以自定义楼层切换工具
+ * 只要实现了 {@link com.indoorun.mapapi.control.event.Loader} 接口，就可以自定义加载楼层的切换工具
+ * UI库默认实现为 {@link SpinnerView}
+ * 通过这种方法加载楼层，可以切换不同地图
+ */
 public class MapLoadSwitcherActivity extends BaseActionbarActivity {
 
     @BindView(R.id.map_switcher_view)
