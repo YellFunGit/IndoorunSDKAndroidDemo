@@ -16,7 +16,7 @@ public class BaseActionbarActivity extends BaseActivity {
     TextView titleView;
 
     @BindView(R.id.back_img)
-    TextView backView;
+    View backView;
 
     @Override
     public void setContentView(int layoutResID) {
