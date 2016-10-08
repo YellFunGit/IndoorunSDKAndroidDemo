@@ -13,15 +13,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Idr.initSDK(this);
-        Thread.setDefaultUncaughtExceptionHandler((thread, ex) -> {
-            ex.printStackTrace();
-            try {
-                Thread.sleep(1500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.exit(0);
-        });
+        Idr.initSDK(this)// 初始化SDK
+                .needCrash();// 拦截崩溃，写入到崩溃日志文件
     }
 }
