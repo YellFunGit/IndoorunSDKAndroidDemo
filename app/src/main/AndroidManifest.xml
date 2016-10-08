@@ -30,7 +30,10 @@
         <activity android:name=".ui.map.MapLoadCustomActivity" />
         <activity android:name=".ui.map.MapLoadSwitcherActivity" />
         <activity android:name=".ui.SectionLocationListActivity" />
-        <activity android:name=".ui.location.LocationStandActivity"></activity>
+        <activity android:name=".ui.location.LocationStandActivity" />
+        <activity android:name=".ui.SectionNaviListActivity" />
+        <activity android:name=".ui.navigate.NaviBaseActivity" />
+        <activity android:name=".ui.navigate.NaviOptionActivity"></activity>
     </application>
 
 </manifest>

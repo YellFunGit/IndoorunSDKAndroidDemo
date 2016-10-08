@@ -1,44 +1,20 @@
 package com.indoorun.testnewsdk.ui;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.widget.ListView;
 
-import com.indoorun.testnewsdk.R;
-import com.joanzapata.android.BaseAdapterHelper;
-import com.joanzapata.android.QuickAdapter;
-
-import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.OnItemClick;
-
-public class SectionHomeListActivity extends BaseActionbarActivity {
-
-    @BindView(R.id.section_list)
-    ListView listView;
-
-    List<String> menus = new ArrayList<>();
+public class SectionHomeListActivity extends BaseSectionListActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_section_list);
-        setTitleTxt("功能列表");
-        setBackViewVisible(false);
-        menus.add("加载地图");
-        menus.add("定位");
-        listView.setAdapter(new QuickAdapter<String>(this, android.R.layout.simple_list_item_1, menus) {
-            @Override
-            protected void convert(BaseAdapterHelper helper, String item) {
-                helper.setText(android.R.id.text1, item);
-            }
-        });
+    protected void addData(List<String> data) {
+        data.add("加载地图");
+        data.add("定位");
+        data.add("导航");
     }
 
-    @OnItemClick(R.id.section_list)
-    public void itemGo(int position) {
+    @Override
+    protected void itemClick(int position) {
         switch (position) {
             case 0:
                 startActivity(new Intent(this, SectionMapListActivity.class));
@@ -46,6 +22,15 @@ public class SectionHomeListActivity extends BaseActionbarActivity {
             case 1:
                 startActivity(new Intent(this, SectionLocationListActivity.class));
                 break;
+            case 2:
+                startActivity(new Intent(this, SectionNaviListActivity.class));
+                break;
         }
+    }
+
+    @Override
+    protected String InitTitle() {
+        setBackViewVisible(false);
+        return "功能列表";
     }
 }
