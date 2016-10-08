@@ -32,10 +32,10 @@ public class NaviBaseDynamicActivity extends BaseActionbarActivity {
         idr.locateWithSwitcher().bindStartAndStopLocateToMapHelper();// 开启定位
         idr.loadRegion("14428254382730015")// 加载region
                 .onMapUnitClick((mapLoader, unit) -> {
-                    if (naviResult != null) {
+                    if (naviResult != null) {// 如果上一个导航没结束，那么结束上一次导航
                         naviResult.stopNavi();
                     }
-                    naviResult = idr.naviFrom().to(unit, R.mipmap.car_position).startNavi();
+                    naviResult = idr.naviFrom().to(unit, R.mipmap.car_position).startNavi();//开启动态导航
                     return true;
                 })
                 .loadFloor(spinnerView);//加载楼层切换器

@@ -117,7 +117,7 @@ public class NaviBaseStaticActivity extends BaseActionbarActivity {
         }
     }
 
-    private void navi() {
+    private void navi() {//开启静态导航
         if (startUnit != null && stopUnit != null) {
             naviResult = idr.naviFrom(startUnit.getFloorId(), startUnit.getPointF())
                     .to(stopUnit.getFloorId(), stopUnit.getPointF())

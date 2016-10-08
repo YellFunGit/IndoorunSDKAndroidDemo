@@ -39,7 +39,7 @@ public class NaviOptionDynamicActivity extends BaseActionbarActivity {
                     if (naviResult != null) {
                         naviResult.stopNavi();
                     }
-                    naviResult = idr.startNavi();
+                    naviResult = idr.startNavi();//开启导航（已经配置为动态导航）
                     return true;
                 })
                 .loadFloor(spinnerView);//加载楼层切换器
