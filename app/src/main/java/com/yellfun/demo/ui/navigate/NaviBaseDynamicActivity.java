@@ -29,7 +29,7 @@ public class NaviBaseDynamicActivity extends BaseActionbarActivity {
         setContentView(R.layout.activity_navi_base_dynamic);
         setTitleTxt("基本方法（动态导航）");
         idr = Idr.with(mapView);
-        idr.locateWithSwitcher().bindStartAndStopLocateToMapHelper();// 开启导航
+        idr.locateWithSwitcher().bindStartAndStopLocateToMapHelper();// 开启定位
         idr.loadRegion("14428254382730015")// 加载region
                 .onMapUnitClick((mapLoader, unit) -> {
                     if (naviResult != null) {

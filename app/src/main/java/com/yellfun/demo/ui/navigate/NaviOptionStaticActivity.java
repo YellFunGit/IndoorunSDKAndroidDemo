@@ -53,8 +53,6 @@ public class NaviOptionStaticActivity extends BaseActionbarActivity {
         setContentView(R.layout.activity_navi_option);
         setTitleTxt("OPTION导航（静态导航）");
         idr = Idr.with(mapView);
-        idr.loadRegion("14428254382730015")// 加载region
-                .loadFloor(spinnerView);//加载楼层切换器
         mapLoader = idr.loadRegion("14428254382730015")// 加载region
                 .onMapUnitClick((mapLoader, unit) -> {
                     naviLayout.setVisibility(View.VISIBLE);
