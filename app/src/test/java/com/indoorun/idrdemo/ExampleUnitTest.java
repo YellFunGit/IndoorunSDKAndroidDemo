@@ -1,4 +1,4 @@
-package com.indoorun.testnewsdk;
+package com.yellfun.demo;
 
 import org.junit.Test;
 

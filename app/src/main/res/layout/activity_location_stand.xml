@@ -4,7 +4,7 @@
     android:id="@+id/activity_location_stand"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.indoorun.testnewsdk.ui.location.LocationStandActivity">
+    tools:context="com.yellfun.demo.ui.location.LocationStandActivity">
 
     <com.indoorun.mapapi.map.gl.IdrMapView
         android:id="@+id/location_stand_map_view"

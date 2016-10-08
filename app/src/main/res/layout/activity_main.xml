@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.indoorun.testnewsdk.ui.map.MapLoadDefaultActivity">
+    tools:context="com.yellfun.demo.ui.map.MapLoadDefaultActivity">
 
     <com.indoorun.mapapi.map.gl.IdrMapView
         android:id="@+id/map_view"

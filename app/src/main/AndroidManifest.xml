@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.indoorun.testnewsdk">
+    package="com.yellfun.demo">
 
     <application
-        android:name=".App"
+        android:name="com.yellfun.demo.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <meta-data
             android:name="idrAppId"
-            android:value="2b497ada3b2711e4b60500163e0e2e6b" />
+            android:value="yf645309714" />
+
         <meta-data
             android:name="idrAppKey"
-            android:value="3d256f0e0ebd51f6176358abd62c1ae0" />
+            android:value="Y4rSCI27NF3t7Ru76KNq60PQIjgP06L4" />
 
-        <activity android:name=".ui.map.MapLoadDefaultActivity" />
-        <activity android:name=".ui.SectionHomeListActivity">
+        <activity android:name="com.yellfun.demo.ui.map.MapLoadDefaultActivity" />
+        <activity android:name="com.yellfun.demo.ui.SectionHomeListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.BaseActionbarActivity" />
-        <activity android:name=".ui.location.LocationIdrActivity" />
-        <activity android:name=".ui.SectionMapListActivity" />
-        <activity android:name=".ui.map.MapLoadCustomActivity" />
-        <activity android:name=".ui.map.MapLoadSwitcherActivity" />
-        <activity android:name=".ui.SectionLocationListActivity" />
-        <activity android:name=".ui.location.LocationStandActivity" />
-        <activity android:name=".ui.SectionNaviListActivity" />
-        <activity android:name=".ui.navigate.NaviBaseActivity" />
-        <activity android:name=".ui.navigate.NaviOptionActivity"></activity>
+        <activity android:name="com.yellfun.demo.ui.BaseActionbarActivity" />
+        <activity android:name="com.yellfun.demo.ui.location.LocationIdrActivity" />
+        <activity android:name="com.yellfun.demo.ui.SectionMapListActivity" />
+        <activity android:name="com.yellfun.demo.ui.map.MapLoadCustomActivity" />
+        <activity android:name="com.yellfun.demo.ui.map.MapLoadSwitcherActivity" />
+        <activity android:name="com.yellfun.demo.ui.SectionLocationListActivity" />
+        <activity android:name="com.yellfun.demo.ui.location.LocationStandActivity" />
+        <activity android:name="com.yellfun.demo.ui.SectionNaviListActivity" />
+        <activity android:name="com.yellfun.demo.ui.navigate.NaviBaseActivity" />
+        <activity android:name="com.yellfun.demo.ui.navigate.NaviOptionActivity"></activity>
     </application>
 
 </manifest>

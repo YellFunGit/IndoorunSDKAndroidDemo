@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.indoorun.testnewsdk.ui.BaseActionbarActivity">
+    tools:context="com.yellfun.demo.ui.BaseActionbarActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/actionbar_height"
-        android:background="@color/action_bar_bg">
+        android:background="@color/actionbar">
 
         <ImageView
             android:id="@+id/back_img"

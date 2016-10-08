@@ -1,4 +1,4 @@
-package com.indoorun.testnewsdk;
+package com.yellfun.demo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
