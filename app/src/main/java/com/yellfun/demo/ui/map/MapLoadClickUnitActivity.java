@@ -34,7 +34,7 @@ public class MapLoadClickUnitActivity extends BaseActionbarActivity {
                     tipsView.setText(String.format(Locale.CHINA, "点击的unit名称：%s, 坐标： x-> %.2f  y-> %.2f", unit.getName(), pointF.x, pointF.y));
                     return true;//返回一个boolean， 用来拦截点击事件，如果返回true，则不响应其他的unit或者marker的点击事件，返回false则继续响应其他的点击事件
                 })
-                .loadFloor("14557583851000004");//加载指定楼层
+                .loadFloor();//加载默认楼层
     }
 
     @Override

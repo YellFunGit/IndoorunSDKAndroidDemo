@@ -42,7 +42,7 @@ public class MapLoadClickMarkerActivity extends BaseActionbarActivity {
                     marker.removeMe();
                     return true;//返回一个boolean， 用来拦截点击事件，如果返回true，则不响应其他的unit或者marker的点击事件，返回false则继续响应其他的点击事件
                 })
-                .loadFloor("14557583851000004");//加载指定楼层
+                .loadFloor("14557583851000004");//加载默认楼层
     }
 
     @Override
