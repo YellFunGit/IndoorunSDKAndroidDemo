@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_map_load_click_unit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yellfun.demo.ui.map.MapLoadClickUnitActivity">
+
+    <com.indoorun.mapapi.map.gl.IdrMapView
+        android:id="@+id/map_click_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tipsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="请点击地图" />
+</RelativeLayout>

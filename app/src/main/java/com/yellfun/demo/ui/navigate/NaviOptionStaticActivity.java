@@ -91,7 +91,7 @@ public class NaviOptionStaticActivity extends BaseActionbarActivity {
                     .setFromPoint(currentUnit.getPointF())
                     .setFromMarker(R.mipmap.start_position);
             if (naviResult != null) {
-                naviResult.stopNavi(true, false);
+                naviResult.stopNavi(true, false);//第一个参数，是否清除起点marker，第二个参数，是否清除终点marker
             }
             navi();
         }
@@ -105,7 +105,7 @@ public class NaviOptionStaticActivity extends BaseActionbarActivity {
                     .setToPoint(currentUnit.getPointF())
                     .setToMarker(R.mipmap.car_position);
             if (naviResult != null) {
-                naviResult.stopNavi(false, true);
+                naviResult.stopNavi(false, true);//第一个参数，是否清除起点marker，第二个参数，是否清除终点marker
             }
             navi();
         }

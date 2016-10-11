@@ -2,6 +2,9 @@ package com.yellfun.demo.ui;
 
 import android.content.Intent;
 
+import com.yellfun.demo.ui.map.MapLoadClickMapActivity;
+import com.yellfun.demo.ui.map.MapLoadClickMarkerActivity;
+import com.yellfun.demo.ui.map.MapLoadClickUnitActivity;
 import com.yellfun.demo.ui.map.MapLoadCustomActivity;
 import com.yellfun.demo.ui.map.MapLoadDefaultActivity;
 import com.yellfun.demo.ui.map.MapLoadSwitcherActivity;
@@ -14,6 +17,9 @@ public class SectionMapListActivity extends BaseSectionListActivity {
         data.add("加载默认楼层");
         data.add("加载指定楼层");
         data.add("加载楼层切换器");
+        data.add("地图点击事件");
+        data.add("unit点击事件");
+        data.add("marker点击事件");
     }
 
     @Override
@@ -27,6 +33,15 @@ public class SectionMapListActivity extends BaseSectionListActivity {
                 break;
             case 2:
                 startActivity(new Intent(this, MapLoadSwitcherActivity.class));
+                break;
+            case 3:
+                startActivity(new Intent(this, MapLoadClickMapActivity.class));
+                break;
+            case 4:
+                startActivity(new Intent(this, MapLoadClickUnitActivity.class));
+                break;
+            case 5:
+                startActivity(new Intent(this, MapLoadClickMarkerActivity.class));
                 break;
         }
     }

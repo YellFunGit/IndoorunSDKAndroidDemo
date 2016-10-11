@@ -36,6 +36,9 @@
         <activity android:name=".ui.navigate.NaviOptionStaticActivity" />
         <activity android:name=".ui.navigate.NaviBaseDynamicActivity" />
         <activity android:name=".ui.navigate.NaviOptionDynamicActivity" />
+        <activity android:name=".ui.map.MapLoadClickMapActivity" />
+        <activity android:name=".ui.map.MapLoadClickUnitActivity" />
+        <activity android:name=".ui.map.MapLoadClickMarkerActivity" />
     </application>
 
 </manifest>

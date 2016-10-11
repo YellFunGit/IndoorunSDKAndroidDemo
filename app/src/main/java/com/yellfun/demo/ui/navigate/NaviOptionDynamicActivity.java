@@ -33,11 +33,11 @@ public class NaviOptionDynamicActivity extends BaseActionbarActivity {
         idr.locateWithSwitcher().bindStartAndStopLocateToMapHelper();// 开启定位
         MapLoader m = idr.loadRegion("14428254382730015")// 加载region
                 .onMapUnitClick((mapLoader, unit) -> {
-                    idr.naviOptions().setToFloorId(unit.getFloorId())
-                            .setToPoint(unit.getPointF())
-                            .setToMarker(R.mipmap.car_position);
+                    idr.naviOptions().setToFloorId(unit.getFloorId())//设置终点楼层
+                            .setToPoint(unit.getPointF())//设置终点坐标
+                            .setToMarker(R.mipmap.car_position);//设置终点marker
                     if (naviResult != null) {
-                        naviResult.stopNavi();
+                        naviResult.stopNavi();//停止上一次导航
                     }
                     naviResult = idr.startNavi();//开启导航（已经配置为动态导航）
                     return true;
