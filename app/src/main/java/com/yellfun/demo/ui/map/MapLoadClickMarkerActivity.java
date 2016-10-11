@@ -3,6 +3,7 @@ package com.yellfun.demo.ui.map;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.TextView;
 
 import com.indoorun.mapapi.control.Idr;
@@ -35,11 +36,13 @@ public class MapLoadClickMarkerActivity extends BaseActionbarActivity {
                     if (bitmap != null && mapLoader.getShowFloor() != null && pointF != null) {
                         mapLoader.addMarker(mapLoader.getShowFloor().getId(), bitmap, pointF.x, pointF.y, 0, bitmap.getHeight() / 2);
                     }
+                    tipsView.setText("请点击marker移除marker");
                     return true;//是否拦截点击事件
                 })
                 .onMarkerClick((marker) -> {// 这里返回的pointF是地图坐标，而不是屏幕坐标，也就是说可能为负数
                     tipsView.setText(String.format(Locale.CHINA, "点击的marker坐标： x-> %.2f  y-> %.2f", marker.getX(), marker.getY()));
                     marker.removeMe();
+                    new Handler().postDelayed(() -> tipsView.setText("请点击地图添加一个marker"), 2000);
                     return true;//返回一个boolean， 用来拦截点击事件，如果返回true，则不响应其他的unit或者marker的点击事件，返回false则继续响应其他的点击事件
                 })
                 .loadFloor("14557583851000004");//加载默认楼层
