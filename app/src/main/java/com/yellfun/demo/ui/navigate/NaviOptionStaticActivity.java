@@ -90,6 +90,9 @@ public class NaviOptionStaticActivity extends BaseActionbarActivity {
             idr.naviOptions().setFromFloorId(currentUnit.getFloorId())
                     .setFromPoint(currentUnit.getPointF())
                     .setFromMarker(R.mipmap.start_position);
+            if (naviResult != null) {
+                naviResult.stopNavi(true, false);
+            }
             navi();
         }
     }
@@ -101,6 +104,9 @@ public class NaviOptionStaticActivity extends BaseActionbarActivity {
             idr.naviOptions().setToFloorId(currentUnit.getFloorId())
                     .setToPoint(currentUnit.getPointF())
                     .setToMarker(R.mipmap.car_position);
+            if (naviResult != null) {
+                naviResult.stopNavi(false, true);
+            }
             navi();
         }
     }
@@ -110,9 +116,6 @@ public class NaviOptionStaticActivity extends BaseActionbarActivity {
                 && !TextUtils.isEmpty(idr.naviOptions().getToFloorId())
                 && idr.naviOptions().getFromPoint() != null
                 && idr.naviOptions().getToPoint() != null) {
-            if (naviResult != null) {
-                naviResult.stopNavi();
-            }
             naviResult = idr.startNavi();
         }
     }
