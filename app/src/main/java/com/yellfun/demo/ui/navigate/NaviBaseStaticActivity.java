@@ -84,15 +84,10 @@ public class NaviBaseStaticActivity extends BaseActionbarActivity {
         if (naviResult != null) {//停止导航
 //            naviResult.stopNavi(true,true);第一个参数为是否清除起点marker， 第二个为是否清除终点marker，如果是手动添加的marker不会被清除
             naviResult.stopNavi();// 两个参数true，但是此演示是手动添加的marker，不是在导航里面添加的，也就是说，停止导航的时候，不会清除marker
+            mapLoader.removeMarkerByClass(CLASS_START);// 需要手动清除marker
+            mapLoader.removeMarkerByClass(CLASS_STOP);
             startUnit = stopUnit = null;
         }
-    }
-
-    @OnClick(R.id.navi_clean_marker)
-    public void cleanMarker() {
-        mapLoader.removeMarkerByClass(CLASS_START);// 需要手动清除marker
-        mapLoader.removeMarkerByClass(CLASS_STOP);
-        startUnit = stopUnit = null;
     }
 
     @Override
