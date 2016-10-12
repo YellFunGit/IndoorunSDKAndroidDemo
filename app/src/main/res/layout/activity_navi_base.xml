@@ -13,16 +13,17 @@
 
     <com.indoorun.mapapi.view.SpinnerView
         android:id="@+id/map_switcher"
-        android:layout_margin="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="点击unit选择起点和终点" />
+        android:text="点击unit选择起点和终点"
+        android:textColor="@color/red" />
 
     <LinearLayout
         android:id="@+id/navi_layout"

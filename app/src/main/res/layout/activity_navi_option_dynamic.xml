@@ -22,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="点击unit开始动态导航" />
+        android:text="点击unit开始动态导航"
+        android:textColor="@color/red" />
 
     <Button
         android:id="@+id/navi_stop_btn"

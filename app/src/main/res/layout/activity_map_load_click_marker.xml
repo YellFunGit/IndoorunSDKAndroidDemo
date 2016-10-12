@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:gravity="center"
-        android:text="请点击地图添加一个marker" />
+        android:text="请点击地图添加一个marker"
+        android:textColor="@color/red" />
 
 </RelativeLayout>
