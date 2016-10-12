@@ -12,6 +12,7 @@ import com.yellfun.demo.R;
 import com.yellfun.demo.ui.BaseActionbarActivity;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 public class NaviOptionDynamicActivity extends BaseActionbarActivity {
 
@@ -46,6 +47,12 @@ public class NaviOptionDynamicActivity extends BaseActionbarActivity {
         idr.naviOptions().setSwitcher(m).setType(NaviOptions.Type.DYNAMIC_NAVI);//设置为动态导航
     }
 
+    @OnClick(R.id.navi_stop_btn)
+    public void stopNavi() {
+        if (naviResult != null) {//停止导航
+            naviResult.stopNavi();
+        }
+    }
 
     @Override
     protected void onResume() {

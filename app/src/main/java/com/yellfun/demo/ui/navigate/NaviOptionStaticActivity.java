@@ -65,6 +65,13 @@ public class NaviOptionStaticActivity extends BaseActionbarActivity {
                 .setSwitcher(mapLoader);//设置操作marker的对象
     }
 
+    @OnClick(R.id.navi_stop_btn)
+    public void stopNavi() {
+        if (naviResult != null) {//停止导航
+            naviResult.stopNavi();
+        }
+    }
+
     @Override
     protected void onResume() {
         super.onResume();

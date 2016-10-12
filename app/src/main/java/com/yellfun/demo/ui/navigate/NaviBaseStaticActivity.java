@@ -79,6 +79,21 @@ public class NaviBaseStaticActivity extends BaseActionbarActivity {
                 .loadFloor(spinnerView);//加载楼层切换器
     }
 
+    @OnClick(R.id.navi_stop_btn)
+    public void stopNavi() {
+        if (naviResult != null) {//停止导航
+//            naviResult.stopNavi(true,true);第一个参数为是否清除起点marker， 第二个为是否清除终点marker，如果是手动添加的marker不会被清除
+            naviResult.stopNavi();// 两个参数true，但是此演示是手动添加的marker，不是在导航里面添加的，也就是说，停止导航的时候，不会清除marker
+            startUnit = stopUnit = null;
+        }
+    }
+
+    @OnClick(R.id.navi_clean_marker)
+    public void cleanMarker() {
+        mapLoader.removeMarkerByClass(CLASS_START);// 需要手动清除marker
+        mapLoader.removeMarkerByClass(CLASS_STOP);
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -102,7 +117,7 @@ public class NaviBaseStaticActivity extends BaseActionbarActivity {
         if (currentUnit != null) {
             startUnit = currentUnit;
             mapLoader.removeMarkerByClass(CLASS_START);
-            mapLoader.addMarker(startUnit, CLASS_START, startBitmap, 0, startBitmap.getHeight() / 2);
+            mapLoader.addMarker(startUnit, CLASS_START, startBitmap, 0, startBitmap.getHeight() / 2);// 通过maploader添加的marker，在停止导航的时候不会被清除掉
             navi();
         }
     }
@@ -112,7 +127,7 @@ public class NaviBaseStaticActivity extends BaseActionbarActivity {
         if (currentUnit != null) {
             stopUnit = currentUnit;
             mapLoader.removeMarkerByClass(CLASS_STOP);
-            mapLoader.addMarker(stopUnit, CLASS_STOP, stopBitmap, 0, stopBitmap.getHeight() / 2);
+            mapLoader.addMarker(stopUnit, CLASS_STOP, stopBitmap, 0, stopBitmap.getHeight() / 2);// 通过maploader添加的marker，在停止导航的时候不会被清除掉
             navi();
         }
     }

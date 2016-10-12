@@ -14,7 +14,8 @@
     <com.indoorun.mapapi.view.SpinnerView
         android:id="@+id/map_switcher"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,4 +23,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:text="点击unit开始动态导航" />
+
+    <Button
+        android:id="@+id/navi_stop_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:text="结束导航" />
+
 </RelativeLayout>
