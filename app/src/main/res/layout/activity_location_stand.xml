@@ -21,6 +21,7 @@
     <com.indoorun.mapapi.view.SpinnerView
         android:id="@+id/map_switcher"
         android:layout_width="wrap_content"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true" />
 </RelativeLayout>
