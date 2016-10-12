@@ -3,6 +3,7 @@ package com.yellfun.demo.ui.location;
 import android.os.Bundle;
 
 import com.indoorun.mapapi.control.Idr;
+import com.indoorun.mapapi.control.locate.LocatorViewHelper;
 import com.indoorun.mapapi.map.gl.IdrMapView;
 import com.indoorun.mapapi.view.SpinnerView;
 import com.yellfun.demo.R;
@@ -26,8 +27,9 @@ public class LocationIdrActivity extends BaseActionbarActivity {
         setTitleTxt("绑定到Idr");
         idr = Idr.with(idrMapView);
         idr.loadRegion("14428254382730015").loadFloor(spinnerView);// 加载地图
-        idr.locateWithSwitcher()// 开启定位
+        LocatorViewHelper locatorViewHelper = idr.locateWithSwitcher()// 开启定位
                 .bindStartAndStopLocateToMapHelper(); //绑定到Idr
+        spinnerView.setLocator(locatorViewHelper);
     }
 
     @Override

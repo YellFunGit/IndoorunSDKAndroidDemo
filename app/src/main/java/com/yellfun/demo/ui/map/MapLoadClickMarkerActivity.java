@@ -29,6 +29,7 @@ public class MapLoadClickMarkerActivity extends BaseActionbarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_load_click_marker);
+        setTitleTxt("marker点击事件");
         idr = Idr.with(mapView);
         idr.loadRegion("14428254382730015")// 加载region
                 .onMapClick((mapLoader, pointF) -> {

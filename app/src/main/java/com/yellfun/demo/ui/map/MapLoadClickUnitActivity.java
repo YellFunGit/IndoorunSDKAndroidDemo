@@ -27,6 +27,7 @@ public class MapLoadClickUnitActivity extends BaseActionbarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_load_click_unit);
+        setTitleTxt("unit点击事件");
         idr = Idr.with(mapView);
         idr.loadRegion("14428254382730015")// 加载region
                 .onMapUnitClick((mapLoader, unit) -> {// 这里返回的pointF是地图坐标，而不是屏幕坐标，也就是说可能为负数

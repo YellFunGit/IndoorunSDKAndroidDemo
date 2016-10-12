@@ -23,9 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".ui.BaseActionbarActivity" />
-
         <activity android:name=".ui.map.MapLoadDefaultActivity" />
         <activity android:name=".ui.map.MapLoadSwitcherActivity" />
         <activity android:name=".ui.map.MapLoadCustomActivity" />
@@ -41,6 +39,7 @@
         <activity android:name=".ui.map.MapLoadClickMapActivity" />
         <activity android:name=".ui.map.MapLoadClickUnitActivity" />
         <activity android:name=".ui.map.MapLoadClickMarkerActivity" />
+        <activity android:name=".ui.map.MapLoadUIActivity" />
     </application>
 
 </manifest>

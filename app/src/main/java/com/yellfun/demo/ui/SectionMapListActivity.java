@@ -8,6 +8,7 @@ import com.yellfun.demo.ui.map.MapLoadClickUnitActivity;
 import com.yellfun.demo.ui.map.MapLoadCustomActivity;
 import com.yellfun.demo.ui.map.MapLoadDefaultActivity;
 import com.yellfun.demo.ui.map.MapLoadSwitcherActivity;
+import com.yellfun.demo.ui.map.MapLoadUIActivity;
 
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class SectionMapListActivity extends BaseSectionListActivity {
         data.add("地图点击事件");
         data.add("unit点击事件");
         data.add("marker点击事件");
+        data.add("UI组件使用演示");
     }
 
     @Override
@@ -42,6 +44,9 @@ public class SectionMapListActivity extends BaseSectionListActivity {
                 break;
             case 5:
                 startActivity(new Intent(this, MapLoadClickMarkerActivity.class));
+                break;
+            case 6:
+                startActivity(new Intent(this, MapLoadUIActivity.class));
                 break;
         }
     }
