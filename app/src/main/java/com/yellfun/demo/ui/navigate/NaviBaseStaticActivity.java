@@ -92,6 +92,7 @@ public class NaviBaseStaticActivity extends BaseActionbarActivity {
     public void cleanMarker() {
         mapLoader.removeMarkerByClass(CLASS_START);// 需要手动清除marker
         mapLoader.removeMarkerByClass(CLASS_STOP);
+        startUnit = stopUnit = null;
     }
 
     @Override
