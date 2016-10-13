@@ -69,6 +69,8 @@ public class NaviOptionStaticActivity extends BaseActionbarActivity {
     public void stopNavi() {
         if (naviResult != null) {//停止导航
             naviResult.stopNavi();
+            idr.naviOptions().setToPoint(null);
+            idr.naviOptions().setFromPoint(null);
         }
     }
 
