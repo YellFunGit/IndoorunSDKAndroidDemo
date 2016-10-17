@@ -37,8 +37,8 @@
 	
 	```
 	dependencies {
-		compile 'com.indoorun.dev:IndoorunSDK_Core:1.0.0' // SDK核心库
-		compile 'com.indoorun.dev:IndoorunSDK_UI:1.0.0' // UI模块库
+		compile 'com.indoorun.mapapi:IndoorunSDK_Core:2.1.0' // SDK核心库
+		compile 'com.indoorun.mapapi:IndoorunSDK_UI:2.1.0' // UI模块库
 	}
 	```
 	

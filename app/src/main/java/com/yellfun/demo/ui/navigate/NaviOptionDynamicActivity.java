@@ -43,6 +43,7 @@ public class NaviOptionDynamicActivity extends BaseActionbarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navi_option_dynamic);
+        setTitleTxt("OPTION导航（动态导航）");
         idr = Idr.with(mapView);
         idr.locateWithSwitcher().bindStartAndStopLocateToMapHelper();// 开启定位
         MapLoader m = idr.loadRegion("14428254382730015")// 加载region
