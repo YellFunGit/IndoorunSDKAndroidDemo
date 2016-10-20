@@ -592,7 +592,7 @@
           naviResult.stopNavi();// 结束导航，在任意需要结束导航的地方结束。
           
           // 静态导航
-           naviResult = idr.naviFrom(String, PointF, int);// 参数分别是FloorID，起点Point，其实点marker资源文件（可不传）
+           naviResult = idr.naviFrom(String, PointF, int);// 参数分别是FloorID，起点Point，起始点marker资源文件（可不传）
                    .to(String, PointF, int)// 参数同起点
                    .onNaviStatus(new Action1<NaviResultStatus>() {
                        @Override
