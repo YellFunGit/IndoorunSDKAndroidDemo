@@ -79,6 +79,9 @@
     - 获取region列表
     
         ```
+        /**
+         * 获取region列表，老方法，2.1.0 版本里面含有此方法，可以调用
+         */
         ComApi.getInstance().getRegionListOfUser()
                         .doOnNext(resRegionListModel -> {
         
