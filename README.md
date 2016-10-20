@@ -4,7 +4,7 @@
 
 - 开发环境
 	
-    本sdk文档是基于Android Studio开发而编写的，因此暂未提供纯aar包或者jar包方式依赖。
+    本sdk文档是基于Android Studio开发而编写的，因此暂未提供jar包方式依赖。
 
 - Idr类
 
