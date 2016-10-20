@@ -200,6 +200,7 @@
           */
           mapLoader.addMarker(String,int,Bitmap,float,float,float,float);
        ```
+       
     - 移除marker
 
         移除Marker可以用MapLoader来操作，也可以用Marker来操作。
@@ -231,6 +232,7 @@
           */
           marker.removeOurCls();
        ```
+       
     - 更新icon
 	   添加Marker的方法，将返回一个Marker对象。用此对象来更新icon
 	   
@@ -240,6 +242,7 @@
          */        
          marker.updateMarkerBitMap(Bitmap);
        ```
+       
     - 更新Marker坐标
 	
        ```
@@ -250,6 +253,7 @@
          */        
          marker.updateMarkerPosition(String,PointF);
        ```
+       
     - 单击、长按marker
         
        ```
@@ -266,8 +270,9 @@
                   }
               });
        ```
-        
+
 - unit操作
+
 	- 单击、长按unit
 
        ```
@@ -284,7 +289,9 @@
                   }
               });
        ```
+       
 - 地图响应
+
 	- 单击、长按地图
 
        ```
@@ -303,6 +310,7 @@
         ```
         
 - 地图基本操作
+
     - 概述 
 
         地图的基本操作均由一个接口完成        
