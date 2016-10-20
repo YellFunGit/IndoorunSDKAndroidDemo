@@ -75,6 +75,18 @@
 
 ## 2、地图模块
 - region相关
+
+    - 获取region列表
+    
+        ```
+        ComApi.getInstance().getRegionListOfUser()
+                        .doOnNext(resRegionListModel -> {
+        
+                        })
+                        .onErrorResumeNext(Observable.empty())
+                        .subscribe();
+        ```
+        
 	- 加载region
 		
 		```
