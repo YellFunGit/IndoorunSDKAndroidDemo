@@ -10,7 +10,7 @@
 
     调用SDK所有的入口包括但不限于SDK初始化、加载地图、定位、导航，都是通过Idr类调用的。
 	
-    除了Idr.initSDK(Context)初始化SDK的方法是静态方法外，其他的方法都是实例方法。
+    除了Idr.initSDK(Context)初始化SDK的方法和Idr.getRegionList()获取用户下面的region列表等少数方法是静态方法外，其他的方法都是实例方法。
 	
     调用实例方法均需要**获取Idr对象**
 	
@@ -89,9 +89,9 @@ ComApi.getInstance().getRegionListOfUser()
               .subscribe();
               
 /**
-* 获取region列表 , 新增加的方法 在 2.1.0 里面没有。后期会加上
+* 获取region列表 , 新增加的方法 在 2.1.0 里面没有。后期会加上。此方法为静态方法, 可以直接通过Idr对象调用
 */
-idr.getRegionList(regions -> {
+Idr.getRegionList(regions -> {
   // regions List<IdrMapRegion> 对象
 }, throwable -> {
   // 错误异常 ，可不传
@@ -124,7 +124,7 @@ IdrMapRegion region = idr.getMapRegion();
 
 **IdrMapRegion**对象
 
-region的所有信息,例如楼层信息和相应楼层的unit信息,都在这个对象里面.该对象的结构如下:
+region的所有信息，例如楼层信息和相应楼层的unit信息，都在这个对象里面。该对象的结构如下:
 
 ```
 /**
