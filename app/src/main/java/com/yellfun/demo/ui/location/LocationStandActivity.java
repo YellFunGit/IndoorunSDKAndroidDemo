@@ -26,6 +26,8 @@ public class LocationStandActivity extends BaseActionbarActivity {
 
     LocateResult locate;// 定位结果
 
+    boolean isLocating;// 用来判断是否正在定位, 以后的SDK版本在定位结果 LocateResult里面会有返回的.
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +45,20 @@ public class LocationStandActivity extends BaseActionbarActivity {
         if (checked) {
             switcher.setText("定位中");
             locate.startLocate();
+            isLocating = true;
         } else {
             locate.stopLocate();
             switcher.setText("未定位");
+            isLocating = false;
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (isLocating) {
+            showToast("您还未关闭定位,不能退出!请关闭定位之后再退出");
+        } else {
+            super.onBackPressed();
         }
     }
 

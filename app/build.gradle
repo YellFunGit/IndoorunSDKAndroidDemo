@@ -30,11 +30,13 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.indoorun.mapapi:IndoorunSDK_Core:2.1.0'
-    compile 'com.indoorun.mapapi:IndoorunSDK_UI:2.1.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
     compile 'com.jakewharton:butterknife:8.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.joanzapata.android:base-adapter-helper:1.1.11'
+
+    //----------------------------SDK--------------------------------
+    compile 'com.indoorun.mapapi:IndoorunSDK_Core:2.1.0'// 定位SDK核心库
+    compile 'com.indoorun.mapapi:IndoorunSDK_UI:2.1.0'// 定位SDK UI库,
 }

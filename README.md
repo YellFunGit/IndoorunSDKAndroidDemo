@@ -89,7 +89,7 @@ ComApi.getInstance().getRegionListOfUser()
               .subscribe();
               
 /**
-* 获取region列表 , 新增加的方法 在 2.1.0 里面没有。后期会加上。此方法为静态方法, 可以直接通过Idr对象调用
+* 获取region列表 , 新增加的方法 在 2.1.0 里面没有。后期会加上。此方法为静态方法, 可以直接通过Idr类名调用
 */
 Idr.getRegionList(regions -> {
   // regions List<IdrMapRegion> 对象
