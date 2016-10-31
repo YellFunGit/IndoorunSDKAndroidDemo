@@ -121,6 +121,103 @@ IdrMapRegion region = idr.getMapRegion();
 `idr.getMapRegion()` 方法可以获取到IdrMapRegion对象，里面包含的是整个region的信息。
   
 `IdrMapRegion`对象是在调用`loadFloor()`之后才会去网络或者缓存里面异步获取，也就是说，该方法返回的对象有可能是空的。因此，使用此对象之前，要做一下非空判断。		
+
+**IdrMapRegion**对象
+
+region的所有信息,例如楼层信息和相应楼层的unit信息,都在这个对象里面.该对象的结构如下:
+
+```
+/**
+  * region对象模型
+  */
+public class IdrMapRegion {
+	private String name;								//region的名字
+	private String cityId;								//region所在的城市ID
+	private String regionType;
+	private float northDeflectionAngle;					//北偏角，地理正北到地图正北的逆时针夹角，0~360
+	private String telephone;
+	private String address;								//region的位置描述
+	private String markerUrl;
+	private float longitude;							//region的位置的纬度信息
+	private float latitude;								//region的位置的经度信息
+	private String status;
+	private long recordTime;
+	private int collectStatus;							//是否已采集完成
+	private int checkStatus;							//是否已测试通过
+	private String recordUser;
+	public String modifyUser;
+	public String defaultFloorId;						//默认楼层,默认加载的楼层ID
+	public long modifyTime;
+	private List<IdrMapRegionFloor> floorList;			//region的楼层列表
+	public String totalPackSize;
+	public String packingFee;
+	public String workTimes;
+	public String packingType;
+	public String description;
+	public List<IdrMapRegionFloorPasses> floorPassList;	//贯通层数据
+	public String beaconUUID;
+	private List<IdrMapRegionFloorUnit> outerExitList;
+	private boolean cuserStored;
+	private boolean enDyGuide;
+	private String introduction;
+	private String photoUrl;
+	private String RegionWholeDataFileName;
+	private long RegionWholeDataFileSize;
+	private String pinyin;
+}
+
+/**
+  * region楼层模型
+  */
+public class IdrMapRegionFloor {
+	private String title;
+	private float ratio;								//当前楼层的缩放率，这个影响定位层的移动速度 1个像素代表真实的X米
+	private String mapUrl;    							//从该地址下载该楼层地图的svg文件
+	private String mapFilePath;
+	private String dataImagePath;
+	private int dataImageSize;
+	private long dataImageTime;
+	private long modifyTime;
+	private List<IdrMapHeat> quyuList;
+	public String floorName;
+	public long collectModifyTime;
+	public long mapModifyTime;
+	public long unitModifyTime;
+	public String regionId;
+	public float width;
+	public float height;
+	private String modifyUser;
+	private String recordUser;
+	private long recordTime;
+	private ResRouteModel pathStructure;
+	private List<IdrMapLine> collectLineList;			//采集线
+	List<IdrMapRegionFloorUnit> unitList;				//该楼层下面的unit列表
+}
+
+/**
+  * region楼层的unit模型
+  */
+public class IdrMapRegionFloorUnit {
+	private String name;
+	private int unitTypeId;								//0，自定义类型 ;1，自动扶梯 ;2，电梯;3，卫生间;4，取款机;5，出口;6，点状图标，可自定义名称;7，入口;8，安全出口;9，楼梯;10，洗车,11收银台;
+	private String description;
+	private float boundLeft;
+	private float boundTop;
+	private float boundRight;
+	private float boundBottom;
+	private String status;
+	private String creator;
+	private long gmtCreate;
+	private String modifier;
+	private long gmtModified;							//格林威治标准时间(校准)
+	private String points;
+	private String detailUrl;
+	private boolean isShown = true;
+	private double lineDistance;
+} 
+```
+
+
 ### 地图显示
 #### 加载地图
 	
@@ -729,5 +826,4 @@ UI模块在`UI`库里面，提供一些为SDK默认行为的UI界面。开发者
                                                    .setLocator(locator);// 监听定位结果
 ```
     
-
 
