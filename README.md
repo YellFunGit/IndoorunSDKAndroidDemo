@@ -26,10 +26,10 @@
 	
 ```
 allprojects {
-repositories {
-jcenter()
-maven { url 'https://dl.bintray.com/yellfun/maven'}
-}
+    repositories {
+        jcenter()
+        maven { url 'https://dl.bintray.com/yellfun/maven'}
+    }
 }
 ```
 	
@@ -37,8 +37,8 @@ maven { url 'https://dl.bintray.com/yellfun/maven'}
 	
 ```
 dependencies {
-compile 'com.indoorun.mapapi:IndoorunSDK_Core:2.1.0' // SDK核心库
-compile 'com.indoorun.mapapi:IndoorunSDK_UI:2.1.0' // UI模块库
+    compile 'com.indoorun.mapapi:IndoorunSDK_Core:2.1.0' // SDK核心库
+    compile 'com.indoorun.mapapi:IndoorunSDK_UI:2.1.0' // UI模块库
 }
 ```
 	
@@ -282,7 +282,7 @@ public class IdrMapRegionFloorUnit {
 - 添加marker
     添加marker同样需要MapLoader来添加
     
-   ```
+  ```
      /**
      * 添加marker
      * @params String 添加marker所在的楼层
@@ -807,14 +807,14 @@ UI模块在`UI`库里面，提供一些为SDK默认行为的UI界面。开发者
 - **XML代码**
     
 ```
-     <com.indoorun.mapapi.view.PositionView
-       android:id="@+id/btn_locate_c"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_alignParentBottom="true"
-       android:layout_alignParentLeft="true"
-       android:layout_marginBottom="45dp"
-       android:layout_marginLeft="25dp" />    
+   <com.indoorun.mapapi.view.PositionView
+     android:id="@+id/btn_locate_c"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignParentBottom="true"
+     android:layout_alignParentLeft="true"
+     android:layout_marginBottom="45dp"
+     android:layout_marginLeft="25dp" />    
 ```
     
 - **java代码**
