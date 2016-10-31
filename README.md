@@ -588,7 +588,10 @@ public class IdrMapRegionFloorUnit {
 ### 定位
 - 开启定位、结束定位
 
+   定位功能需要部署beacon设备，因此，该功能需要在有beacon的环境中才能体现出来。
+   
    定位有两种开启和结束方式
+   
    - 绑定定位开启和结束到Idr的周期
 
        ```
