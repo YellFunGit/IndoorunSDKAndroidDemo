@@ -278,6 +278,8 @@ public class IdrMapRegionFloorUnit {
        
        `loadFloor`是`MapLoader`还未加载`Region`的时候，调用以此来加载`Region`信息的。此方法有主要有2类方法，一类是加载指定楼层（指定FloorId，指定IdrMapRegionFloor对象，或者默认楼层），一类是加载一个实现`Loader`接口的对象，用来外部切换楼层加载。
        
+       `switchFloor`是`MapLoader`已经成功加载`Region`之后，用来切换楼层用了,此方法不能用来加载还未加载成功`Region`的`MapLoader`的floor。
+       
 #### marker操作
 - 添加marker
     添加marker同样需要MapLoader来添加
