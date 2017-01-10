@@ -18,7 +18,7 @@ import com.yellfun.demo.ui.BaseActionbarActivity;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class NaviBaseStaticActivity extends BaseActionbarActivity {
+public class NaviStaticActivity extends BaseActionbarActivity {
 
     /**
      * 起点marker类型

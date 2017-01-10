@@ -37,6 +37,6 @@ dependencies {
     compile 'com.joanzapata.android:base-adapter-helper:1.1.11'
 
     //----------------------------SDK--------------------------------
-    compile 'com.indoorun.mapapi:IndoorunSDK_Core:2.1.0'// 定位SDK核心库
-    compile 'com.indoorun.mapapi:IndoorunSDK_UI:2.1.0'// 定位SDK UI库,
+    compile 'com.indoorun.mapapi:IndoorunSDK_Core:2.3.0'// 定位SDK核心库
+    compile 'com.indoorun.mapapi:IndoorunSDK_UI:2.3.0'// 定位SDK UI库,
 }

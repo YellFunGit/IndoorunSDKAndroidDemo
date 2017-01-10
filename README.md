@@ -1,6 +1,19 @@
 # sdk开发者文档(Android)
 
 ## SDK简介说明
+- 更新日志
+    - 更新说明
+        - 2017-01-10：发布2.3.0，一些api的更新，优化，删除了导航的naviOption类。
+            优化地图缓存，增加围栏信息（为了让围栏信息成功加载，加载定位的代码，需要在加载地图之后）
+            优化代码逻辑，修复bug
+
+        - 2017-01-10之前：初始化demo
+
+    - 更新时间表
+
+        时间|版本|备注
+        :---:|:---:|:---
+        2017-01-10|2.3.0|
 
 - 开发环境
 	
@@ -37,8 +50,8 @@ allprojects {
 	
 ```
 dependencies {
-    compile 'com.indoorun.mapapi:IndoorunSDK_Core:2.1.0' // SDK核心库
-    compile 'com.indoorun.mapapi:IndoorunSDK_UI:2.1.0' // UI模块库
+    compile 'com.indoorun.mapapi:IndoorunSDK_Core:2.3.0' // SDK核心库
+    compile 'com.indoorun.mapapi:IndoorunSDK_UI:2.3.0' // UI模块库
 }
 ```
 	
@@ -725,21 +738,6 @@ idr.locateWithSwitcher()
               
      naviResult.stopNavi();// 结束导航，在任意需要结束导航的地方结束。
    ```
-#### 2. 通过idr.naviOptions()，配置导航参数方式
-
-   ```
-      idr.naviOptions() 
-         .setType(NaviOptions.Type.STATIC_NAVI)// 设置导航类型，静态或者动态
-         .setFromPoint(startUnit.getPointF())// 设置起点坐标
-         .setFromFloorId(startUnit.getFloorId())// 设置起点楼层ID
-         .setSwitcher(mapLoader)// 设置mapLoader，用于添加marker
-         .setFromMarker(R.drawable.start_position);// 设置起点marker资源文件
-         .setToUnit(endUnit)// 设置终点坐标
-         .setToMarker(R.drawable.car_position);// 设置终点的marker
-        
-     idr.startNavi();// 在任意地方开启导航
-     idr.stopNavi();// 在任意地方结束导航
-  ```
     
 ## UI模块
 

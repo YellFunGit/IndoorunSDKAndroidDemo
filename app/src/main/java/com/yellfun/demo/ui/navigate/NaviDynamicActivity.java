@@ -12,7 +12,7 @@ import com.yellfun.demo.ui.BaseActionbarActivity;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class NaviBaseDynamicActivity extends BaseActionbarActivity {
+public class NaviDynamicActivity extends BaseActionbarActivity {
 
     @BindView(R.id.map_switcher_view)
     IdrMapView mapView;
@@ -30,7 +30,6 @@ public class NaviBaseDynamicActivity extends BaseActionbarActivity {
         setContentView(R.layout.activity_navi_base_dynamic);
         setTitleTxt("基本方法（动态导航）");
         idr = Idr.with(mapView);
-        idr.locateWithSwitcher().bindStartAndStopLocateToMapHelper();// 开启定位
         idr.loadRegion("14428254382730015")// 加载region
                 .onMapUnitClick((mapLoader, unit) -> {
                     if (naviResult != null) {// 如果上一个导航没结束，那么结束上一次导航
@@ -40,6 +39,7 @@ public class NaviBaseDynamicActivity extends BaseActionbarActivity {
                     return true;
                 })
                 .loadFloor(spinnerView);//加载楼层切换器
+        idr.locateWithSwitcher().bindStartAndStopLocateToMapHelper();// 开启定位
     }
 
     @OnClick(R.id.navi_stop_btn)

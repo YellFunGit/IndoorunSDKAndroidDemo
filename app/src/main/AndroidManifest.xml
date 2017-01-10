@@ -32,10 +32,8 @@
         <activity android:name=".ui.SectionNaviListActivity" />
         <activity android:name=".ui.location.LocationIdrActivity" />
         <activity android:name=".ui.location.LocationStandActivity" />
-        <activity android:name=".ui.navigate.NaviBaseStaticActivity" />
-        <activity android:name=".ui.navigate.NaviOptionStaticActivity" />
-        <activity android:name=".ui.navigate.NaviBaseDynamicActivity" />
-        <activity android:name=".ui.navigate.NaviOptionDynamicActivity" />
+        <activity android:name=".ui.navigate.NaviStaticActivity" />
+        <activity android:name=".ui.navigate.NaviDynamicActivity" />
         <activity android:name=".ui.map.MapLoadClickMapActivity" />
         <activity android:name=".ui.map.MapLoadClickUnitActivity" />
         <activity android:name=".ui.map.MapLoadClickMarkerActivity" />
