@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.indoorun.mapapi.control.Idr;
 import com.indoorun.mapapi.control.map.MapLoader;
 import com.indoorun.mapapi.control.navi.NaviResult;
+import com.indoorun.mapapi.control.navi.NaviSearchType;
 import com.indoorun.mapapi.domain.IdrMapRegionFloorUnit;
 import com.indoorun.mapapi.map.gl.IdrMapView;
 import com.indoorun.mapapi.view.SpinnerView;
@@ -135,6 +136,7 @@ public class NaviStaticActivity extends BaseActionbarActivity {
             }
             naviResult = idr.naviFrom(startUnit.getFloorId(), startUnit.getPointF())
                     .to(stopUnit.getFloorId(), stopUnit.getPointF())
+                    .setNaviSearchType(NaviSearchType.MAN)// 设置人行导航
                     .startNavi();
         }
     }

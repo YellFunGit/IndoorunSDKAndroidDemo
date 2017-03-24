@@ -15,6 +15,12 @@
         :---:|:---:|:---
         2017-01-10|2.3.0|
 
+    - SDK javadoc
+        []
+
+    - 官网
+        [http://indoorun.com/](http://indoorun.com/)
+
 - 开发环境
 	
     本sdk文档是基于Android Studio开发而编写的，因此暂未提供jar包方式依赖。
