@@ -15,6 +15,9 @@ import java.util.Locale;
 
 import butterknife.BindView;
 
+import static com.yellfun.demo.App.FLOOR_ID;
+import static com.yellfun.demo.App.REGION_ID;
+
 public class MapLoadClickMarkerActivity extends BaseActionbarActivity {
 
     @BindView(R.id.map_click_view)
@@ -31,7 +34,7 @@ public class MapLoadClickMarkerActivity extends BaseActionbarActivity {
         setContentView(R.layout.activity_map_load_click_marker);
         setTitleTxt("marker点击事件");
         idr = Idr.with(mapView);
-        idr.loadRegion("14428254382730015")// 加载region
+        idr.loadRegion(REGION_ID)// 加载region
                 .onMapClick((mapLoader, pointF) -> {
                     Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.car_position);
                     if (bitmap != null && mapLoader.getShowFloor() != null && pointF != null) {
@@ -46,7 +49,7 @@ public class MapLoadClickMarkerActivity extends BaseActionbarActivity {
                     new Handler().postDelayed(() -> tipsView.setText("请点击地图添加一个marker"), 2000);
                     return true;//返回一个boolean， 用来拦截点击事件，如果返回true，则不响应其他的unit或者marker的点击事件，返回false则继续响应其他的点击事件
                 })
-                .loadFloor("14557583851000004");//加载默认楼层
+                .loadFloor(FLOOR_ID);//加载默认楼层
     }
 
     @Override

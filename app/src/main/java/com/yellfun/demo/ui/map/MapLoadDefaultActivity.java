@@ -9,6 +9,8 @@ import com.yellfun.demo.ui.BaseActionbarActivity;
 
 import butterknife.BindView;
 
+import static com.yellfun.demo.App.REGION_ID;
+
 public class MapLoadDefaultActivity extends BaseActionbarActivity {
 
     @BindView(R.id.map_view)
@@ -22,7 +24,7 @@ public class MapLoadDefaultActivity extends BaseActionbarActivity {
         setContentView(R.layout.activity_main);
         setTitleTxt("加载默认楼层");
         idr = Idr.with(mapView);
-        idr.loadRegion("14428254382730015")// 加载region
+        idr.loadRegion(REGION_ID)// 加载region
                 .loadFloor();//加载默认楼层
     }
 

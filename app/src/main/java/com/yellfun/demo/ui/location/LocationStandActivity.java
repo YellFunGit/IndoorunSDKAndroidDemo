@@ -14,6 +14,8 @@ import com.yellfun.demo.ui.BaseActionbarActivity;
 import butterknife.BindView;
 import butterknife.OnCheckedChanged;
 
+import static com.yellfun.demo.App.REGION_ID;
+
 public class LocationStandActivity extends BaseActionbarActivity {
 
     @BindView(R.id.location_stand_map_view)
@@ -34,7 +36,7 @@ public class LocationStandActivity extends BaseActionbarActivity {
         setContentView(R.layout.activity_location_stand);
         setTitleTxt("独立定位");
         idr = Idr.with(idrMapView);
-        idr.loadRegion("14428254382730015").loadFloor(spinnerView);// 加载地图
+        idr.loadRegion(REGION_ID).loadFloor(spinnerView);// 加载地图
         LocatorViewHelper locatorViewHelper = idr.locateWithSwitcher();//开启定位
         locate = locatorViewHelper.readyToLocate();//获取到定位结果
         spinnerView.setLocator(locatorViewHelper);//设置红点显示当前楼层

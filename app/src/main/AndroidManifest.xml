@@ -11,13 +11,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--<meta-data-->
+            <!--android:name="idrAppId"-->
+            <!--android:value="yf645309714" />-->
+        <!--<meta-data-->
+            <!--android:name="idrAppKey"-->
+            <!--android:value="Y4rSCI27NF3t7Ru76KNq60PQIjgP06L4" />-->
+
         <meta-data
             android:name="idrAppId"
-            android:value="yf645309714" />
+            android:value="yf939370706" />
         <meta-data
             android:name="idrAppKey"
-            android:value="Y4rSCI27NF3t7Ru76KNq60PQIjgP06L4" />
-
+            android:value="Av3o9Uqze9NP93645kUx3AL2sROmV3xN" />
         <activity android:name=".ui.SectionHomeListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +32,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.BaseActionbarActivity" />
+        <activity android:name=".ui.MultiLocateActivity" />
         <activity android:name=".ui.map.MapLoadDefaultActivity" />
         <activity android:name=".ui.map.MapLoadSwitcherActivity" />
         <activity android:name=".ui.map.MapLoadCustomActivity" />

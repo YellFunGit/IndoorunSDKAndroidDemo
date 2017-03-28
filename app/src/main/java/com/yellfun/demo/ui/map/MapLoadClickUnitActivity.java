@@ -13,6 +13,8 @@ import java.util.Locale;
 
 import butterknife.BindView;
 
+import static com.yellfun.demo.App.REGION_ID;
+
 public class MapLoadClickUnitActivity extends BaseActionbarActivity {
 
     @BindView(R.id.map_click_view)
@@ -29,7 +31,7 @@ public class MapLoadClickUnitActivity extends BaseActionbarActivity {
         setContentView(R.layout.activity_map_load_click_unit);
         setTitleTxt("unit点击事件");
         idr = Idr.with(mapView);
-        idr.loadRegion("14428254382730015")// 加载region
+        idr.loadRegion(REGION_ID)// 加载region
                 .onMapUnitClick((mapLoader, unit) -> {// 这里返回的pointF是地图坐标，而不是屏幕坐标，也就是说可能为负数
                     PointF pointF = unit.getPointF();
                     tipsView.setText(String.format(Locale.CHINA, "点击的unit名称：%s, 坐标： x-> %.2f  y-> %.2f", unit.getName(), pointF.x, pointF.y));

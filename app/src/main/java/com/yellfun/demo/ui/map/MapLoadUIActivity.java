@@ -14,6 +14,8 @@ import com.yellfun.demo.ui.BaseActionbarActivity;
 
 import butterknife.BindView;
 
+import static com.yellfun.demo.App.REGION_ID;
+
 /**
  * UI界面，指南针，楼层切换器，定位点按钮
  */
@@ -39,7 +41,8 @@ public class MapLoadUIActivity extends BaseActionbarActivity {
         setContentView(R.layout.activity_map_load_ui);
         setTitleTxt("添加UI组件");
         idr = Idr.with(idrMapView);
-        MapLoader mapLoader = idr.loadRegion("14428254382730015")//加载指定region
+
+        MapLoader mapLoader = idr.loadRegion(REGION_ID)//加载指定region
                 .onLoadedRegion(region -> northView.setMapView(idrMapView, region.getNorthDeflectionAngle()))// 组件2 楼层指南针 当region加载成功之后，设置指南针mapview对象，第二个参数为北偏角
                 .loadFloor(spinnerView);// 加载楼层切换器（组件1 楼层切换器 ， 这样使用之后就可以用来切换楼层）
         LocatorViewHelper locatorViewHelper = idr.locateWithSwitcher().bindStartAndStopLocateToMapHelper();//开启定位

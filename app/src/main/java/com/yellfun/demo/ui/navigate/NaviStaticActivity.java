@@ -19,6 +19,8 @@ import com.yellfun.demo.ui.BaseActionbarActivity;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+import static com.yellfun.demo.App.REGION_ID;
+
 public class NaviStaticActivity extends BaseActionbarActivity {
 
     /**
@@ -70,7 +72,7 @@ public class NaviStaticActivity extends BaseActionbarActivity {
         startBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.start_position);
         stopBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.car_position);
         idr = Idr.with(mapView);
-        mapLoader = idr.loadRegion("14428254382730015")// 加载region
+        mapLoader = idr.loadRegion(REGION_ID)// 加载region
                 .onMapUnitClick((mapLoader, unit) -> {
                     naviLayout.setVisibility(View.VISIBLE);
                     currentUnit = unit;

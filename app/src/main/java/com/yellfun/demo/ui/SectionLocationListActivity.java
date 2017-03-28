@@ -13,6 +13,7 @@ public class SectionLocationListActivity extends BaseSectionListActivity {
     protected void addData(List<String> data) {
         data.add("绑定到Idr");
         data.add("单独开启关闭");
+        data.add("多点定位");
     }
 
     @Override
@@ -23,6 +24,9 @@ public class SectionLocationListActivity extends BaseSectionListActivity {
                 break;
             case 1:
                 startActivity(new Intent(this, LocationStandActivity.class));
+                break;
+            case 2:
+                startActivity(new Intent(this, MultiLocateActivity.class));
                 break;
         }
     }

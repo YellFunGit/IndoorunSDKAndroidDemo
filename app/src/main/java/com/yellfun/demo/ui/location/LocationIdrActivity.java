@@ -11,6 +11,8 @@ import com.yellfun.demo.ui.BaseActionbarActivity;
 
 import butterknife.BindView;
 
+import static com.yellfun.demo.App.REGION_ID;
+
 public class LocationIdrActivity extends BaseActionbarActivity {
     @BindView(R.id.location_map_view)
     IdrMapView idrMapView;
@@ -26,7 +28,7 @@ public class LocationIdrActivity extends BaseActionbarActivity {
         setContentView(R.layout.activity_location);
         setTitleTxt("绑定到Idr");
         idr = Idr.with(idrMapView);
-        idr.loadRegion("14428254382730015").loadFloor(spinnerView);// 加载地图
+        idr.loadRegion(REGION_ID).loadFloor(spinnerView);// 加载地图
         LocatorViewHelper locatorViewHelper = idr.locateWithSwitcher()// 开启定位
                 .bindStartAndStopLocateToMapHelper(); //绑定到Idr
         spinnerView.setLocator(locatorViewHelper);

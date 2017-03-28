@@ -10,6 +10,8 @@ import com.yellfun.demo.ui.BaseActionbarActivity;
 
 import butterknife.BindView;
 
+import static com.yellfun.demo.App.REGION_ID;
+
 /**
  * 加载楼层切换器，可以自定义楼层切换工具
  * 只要实现了 {@link com.indoorun.mapapi.control.event.Loader} 接口，就可以自定义加载楼层的切换工具
@@ -32,7 +34,7 @@ public class MapLoadSwitcherActivity extends BaseActionbarActivity {
         setContentView(R.layout.activity_map_load_switcher);
         setTitleTxt("加载楼层切换器");
         idr = Idr.with(mapView);
-        idr.loadRegion("14428254382730015")// 加载region
+        idr.loadRegion(REGION_ID)// 加载region
                 .loadFloor(spinnerView);//加载楼层切换器
     }
 
