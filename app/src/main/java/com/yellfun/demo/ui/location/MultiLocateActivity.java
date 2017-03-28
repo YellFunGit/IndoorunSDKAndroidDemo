@@ -1,4 +1,4 @@
-package com.yellfun.demo.ui;
+package com.yellfun.demo.ui.location;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -43,6 +43,7 @@ public class MultiLocateActivity extends AppCompatActivity implements View.OnCli
                 helper.setText(R.id.item_uuid, item);
             }
         });
+        adapter.add("000000000d4c6449ad5cb05800000000");
         idr = Idr.with(idrMap3DView);
         idr.loadRegion(REGION_ID).loadFloor();
     }

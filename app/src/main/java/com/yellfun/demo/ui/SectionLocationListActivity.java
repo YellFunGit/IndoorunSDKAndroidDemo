@@ -4,6 +4,7 @@ import android.content.Intent;
 
 import com.yellfun.demo.ui.location.LocationIdrActivity;
 import com.yellfun.demo.ui.location.LocationStandActivity;
+import com.yellfun.demo.ui.location.MultiLocateActivity;
 
 import java.util.List;
 

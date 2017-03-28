@@ -4,12 +4,14 @@ import android.os.Bundle;
 
 import com.indoorun.mapapi.control.Idr;
 import com.indoorun.mapapi.control.locate.LocatorViewHelper;
+import com.indoorun.mapapi.core.data.IndoorunSDKDataCenter;
 import com.indoorun.mapapi.map.gl.IdrMapView;
 import com.indoorun.mapapi.view.SpinnerView;
 import com.yellfun.demo.R;
 import com.yellfun.demo.ui.BaseActionbarActivity;
 
 import butterknife.BindView;
+import rx.Observable;
 
 import static com.yellfun.demo.App.REGION_ID;
 
@@ -21,6 +23,7 @@ public class LocationIdrActivity extends BaseActionbarActivity {
     SpinnerView spinnerView;
 
     Idr idr;
+    LocatorViewHelper locatorViewHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +32,12 @@ public class LocationIdrActivity extends BaseActionbarActivity {
         setTitleTxt("绑定到Idr");
         idr = Idr.with(idrMapView);
         idr.loadRegion(REGION_ID).loadFloor(spinnerView);// 加载地图
-        LocatorViewHelper locatorViewHelper = idr.locateWithSwitcher()// 开启定位
-                .bindStartAndStopLocateToMapHelper(); //绑定到Idr
+
+        IndoorunSDKDataCenter.getInstance().getPhoneUUIDWithPermission()
+                .doOnNext(s -> locatorViewHelper = idr.locateWithSwitcher()// 开启定位
+                        .bindStartAndStopLocateToMapHelper())
+                .onErrorResumeNext(Observable.empty())
+                .subscribe();
         spinnerView.setLocator(locatorViewHelper);
     }
 

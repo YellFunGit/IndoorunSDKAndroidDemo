@@ -6,6 +6,7 @@ import android.widget.Switch;
 import com.indoorun.mapapi.control.Idr;
 import com.indoorun.mapapi.control.event.LocateResult;
 import com.indoorun.mapapi.control.locate.LocatorViewHelper;
+import com.indoorun.mapapi.core.data.IndoorunSDKDataCenter;
 import com.indoorun.mapapi.map.gl.IdrMapView;
 import com.indoorun.mapapi.view.SpinnerView;
 import com.yellfun.demo.R;
@@ -13,6 +14,7 @@ import com.yellfun.demo.ui.BaseActionbarActivity;
 
 import butterknife.BindView;
 import butterknife.OnCheckedChanged;
+import rx.Observable;
 
 import static com.yellfun.demo.App.REGION_ID;
 
@@ -46,7 +48,10 @@ public class LocationStandActivity extends BaseActionbarActivity {
     public void control(Switch switcher, boolean checked) {
         if (checked) {
             switcher.setText("定位中");
-            locate.startLocate();
+            IndoorunSDKDataCenter.getInstance().getPhoneUUIDWithPermission()
+                    .doOnNext(s -> locate.startLocate())
+                    .onErrorResumeNext(Observable.empty())
+                    .subscribe();
             isLocating = true;
         } else {
             locate.stopLocate();

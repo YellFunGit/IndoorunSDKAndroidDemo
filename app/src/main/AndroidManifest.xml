@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.BaseActionbarActivity" />
-        <activity android:name=".ui.MultiLocateActivity" />
+        <activity android:name=".ui.location.MultiLocateActivity" />
         <activity android:name=".ui.map.MapLoadDefaultActivity" />
         <activity android:name=".ui.map.MapLoadSwitcherActivity" />
         <activity android:name=".ui.map.MapLoadCustomActivity" />
